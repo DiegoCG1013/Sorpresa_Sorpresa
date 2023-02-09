@@ -1,0 +1,31 @@
+@startuml
+
+interface Dialogo {
+  + operation(): void
+}
+
+class DialogoWindows implements Dialogo {
+  + operation(): void
+}
+
+class DialogoMac implements Dialogo {
+  + operation(): void
+}
+
+abstract class FabricaDialogo {
+  + createDialogo(): Dialogo
+}
+
+class FabricaDialogoWindows extends FabricaDialogo {
+  + createDialogo(): Dialogo
+}
+
+class FabricaDialogoMac extends FabricaDialogo {
+  + createDialogo(): Dialogo
+}
+
+class Cliente {
+  + main(): void
+}
+
+@enduml
