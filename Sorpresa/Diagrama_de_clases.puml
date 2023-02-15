@@ -28,4 +28,13 @@ class Cliente {
   + main(): void
 }
 
+FabricaDialogoMac -- DialogoMac : crea
+FabricaDialogoWindows -- DialogoWindows : crea
+
+Cliente --> FabricaDialogoMac : usa
+Cliente --> FabricaDialogoWindows : usa
+
+Cliente <-- DialogoMac : Recibe
+Cliente <-- DialogoWindows : Recibe
+
 @enduml
